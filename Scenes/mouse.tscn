@@ -111,3 +111,7 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033194307]
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_dev0r")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=235468443]
+wait_time = 0.25
+one_shot = true
