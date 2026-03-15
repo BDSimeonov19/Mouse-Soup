@@ -117,6 +117,7 @@ wait_time = 0.25
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=368330245]
+position = Vector2(0, -37)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
