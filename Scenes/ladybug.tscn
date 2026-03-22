@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://4kp4b4md4rj8"]
+
+[ext_resource type="Script" uid="uid://0laj1pacnjjb" path="res://Scripts/ladybug.gd" id="1_2lt8f"]
+[ext_resource type="Texture2D" uid="uid://cd03fhw60nfef" path="res://Assets/LadybugSpriteSheet.png" id="1_5ymec"]
+[ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_tji8x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lt8f"]
+atlas = ExtResource("1_5ymec")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tji8x"]
+atlas = ExtResource("1_5ymec")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxmr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lt8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tji8x")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ymec"]
+radius = 6.0
+height = 24.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2lt8f"]
+radius = 7.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tji8x"]
+radius = 7.0
+height = 26.0
+
+[node name="Ladybug" type="CharacterBody2D" unique_id=1959778033]
+script = ExtResource("1_2lt8f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1431210692]
+position = Vector2(2, -7)
+sprite_frames = SubResource("SpriteFrames_vxmr7")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.6463935
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1599062317]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_5ymec")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1371396276]
+position = Vector2(16, -10)
+target_position = Vector2(0, 19)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2105239628]
+collision_layer = 2
+script = ExtResource("3_tji8x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=2011891287]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2lt8f")
+debug_color = Color(0.3134422, 0.49497908, 0.99711686, 0.41960785)
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1023518393]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1835254845]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tji8x")
+debug_color = Color(0.9045685, 0.1693117, 0.633039, 0.41960785)
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
