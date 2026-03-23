@@ -1,8 +1,8 @@
 class_name Character extends CharacterBody2D
 
-var health = 3
+var health = 2
 
-const SPEED = 0.0
+const SPEED = 25.0
 const JUMP_VELOCITY = -300.0
 
 @onready var ray := $RayCast2D;
@@ -34,12 +34,13 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 
 func take_damage() -> void:
 	health -= 1;
-	sprite.modulate = Color(1, 0, 0, 1)
-	await get_tree().create_timer(0.5).timeout
-	sprite.modulate = Color(1, 1, 1, 1)
 	
 	if health == 0:
 		kill();
+	
+	sprite.modulate = Color(1, 0, 0, 1)
+	await get_tree().create_timer(0.5).timeout
+	sprite.modulate = Color(1, 1, 1, 1)
 
 func kill() -> void:
 	queue_free()
