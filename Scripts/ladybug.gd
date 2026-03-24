@@ -1,4 +1,4 @@
-class_name Character extends CharacterBody2D
+extends CharacterBody2D
 
 var health = 2
 
@@ -29,7 +29,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area is Hitbox:
-		print("ouch")
 		take_damage();
 
 func take_damage() -> void:

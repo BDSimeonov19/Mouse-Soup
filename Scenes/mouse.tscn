@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcuxx67ofl6a0"]
 
 [ext_resource type="Script" uid="uid://706qjlndbal3" path="res://Scripts/mouse.gd" id="1_3ber4"]
-[ext_resource type="Texture2D" uid="uid://sv8v6sebq4ie" path="res://Assets/MouseSpriteSheet.png" id="1_dev0r"]
+[ext_resource type="Texture2D" uid="uid://sv8v6sebq4ie" path="res://Assets/Graphics/MouseSpriteSheet.png" id="1_dev0r"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_kxv04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwmpi"]

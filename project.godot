@@ -14,6 +14,10 @@ config/name="Mouse Soup"
 run/main_scene="uid://bp8yefcexq8q1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+ItemsManager="*uid://dpn7ej0tay23a"
+
 [display]
 
 window/size/viewport_width=320

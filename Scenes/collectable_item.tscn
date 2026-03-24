@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ypgj0aiaf5ch"]
+
+[ext_resource type="Script" uid="uid://vtd7soh0rl4" path="res://Scripts/collectable_item.gd" id="2_ktvw7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bp64"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"bob",
+"speed": 1.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_344ge"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 4, 4)
+angle_min = -609.0
+angle_max = 364.00003
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, -5, 0)
+color = Color(0.9529412, 0.85490197, 0.95686275, 0.47058824)
+turbulence_enabled = true
+turbulence_noise_strength = 0.12
+turbulence_noise_scale = 7.055
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kry3j"]
+size = Vector2(7, 14)
+
+[node name="CollectableItem" type="Node2D" unique_id=1562721093]
+script = ExtResource("2_ktvw7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1343627430]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_6bp64")
+animation = &"bob"
+autoplay = "bob"
+frame_progress = 0.27364066
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="AnimatedSprite2D" unique_id=2048140507]
+z_index = -1
+amount = 6
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_344ge")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=2024072555]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1573137674]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_kry3j")
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
