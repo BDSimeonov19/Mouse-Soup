@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c36emmaioid3n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
+bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9073619, 0.79726005, 0.6803515, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
+bg_color = Color(0.50363636, 0.40337807, 0.29561737, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5688208, 0.43386292, 0.28008035, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.6335806, 0.5179831, 0.39445058, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7260533, 0.568654, 0.39308274, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[node name="MainMenu" type="Control" unique_id=1732847701]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=271547595]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -38.0
+offset_right = -25.0
+offset_bottom = 38.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Begin" type="Button" parent="VBoxContainer" unique_id=312124454]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Begin"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=142554295]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=55904027]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Quit"

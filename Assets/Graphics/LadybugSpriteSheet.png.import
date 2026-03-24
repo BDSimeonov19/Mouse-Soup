@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doqm4hh8y3khx"
-path="res://.godot/imported/FallBackground.png-8b66eeb1085cd25e6de02adcb68c8883.ctex"
+uid="uid://cd03fhw60nfef"
+path="res://.godot/imported/LadybugSpriteSheet.png-b641135b638bacd833db7382b5c3d947.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FallBackground.png"
-dest_files=["res://.godot/imported/FallBackground.png-8b66eeb1085cd25e6de02adcb68c8883.ctex"]
+source_file="res://Assets/Graphics/LadybugSpriteSheet.png"
+dest_files=["res://.godot/imported/LadybugSpriteSheet.png-b641135b638bacd833db7382b5c3d947.ctex"]
 
 [params]
 
