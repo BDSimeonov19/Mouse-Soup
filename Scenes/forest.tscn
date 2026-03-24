@@ -163,7 +163,6 @@ tag = "carrot"
 
 [node name="AnimatedSprite2D" parent="Carrot" index="0" unique_id=1343627430]
 sprite_frames = SubResource("SpriteFrames_u53w3")
-autoplay = "default"
 frame_progress = 0.056679584
 
 [node name="Broccoli" parent="." unique_id=1562721093 instance=ExtResource("5_u53w3")]
