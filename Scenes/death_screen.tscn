@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://di1x5e2gd41sg"]
+
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="1_rwas2"]
+[ext_resource type="Script" uid="uid://lkoup17ci8ng" path="res://Scripts/death_screen.gd" id="1_tseak"]
+[ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_tseak"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amiou"]
+bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9073619, 0.79726005, 0.6803515, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vb6s7"]
+bg_color = Color(0.50363636, 0.40337807, 0.29561737, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5688208, 0.43386292, 0.28008035, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpvs2"]
+bg_color = Color(0.6335806, 0.5179831, 0.39445058, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7260533, 0.568654, 0.39308274, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[node name="DeathScreen" type="Control" unique_id=878959048]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tseak")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064792954]
+position = Vector2(159.8846, 89)
+scale = Vector2(0.88952994, 0.8846155)
+texture = ExtResource("1_rwas2")
+
+[node name="Title" type="Label" parent="." unique_id=384588117]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 234.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("2_tseak")
+theme_override_font_sizes/font_size = 35
+text = "Game over :("
+
+[node name="Restart" type="Button" parent="." unique_id=991716529]
+z_index = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 136.0
+offset_right = 200.0
+offset_bottom = 152.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_tseak")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_amiou")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vb6s7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tpvs2")
+text = "Restart"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

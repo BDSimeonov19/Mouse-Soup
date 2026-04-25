@@ -24,3 +24,11 @@ func developer_reset_game():
 
 func take_damage(current_health, diff):
 	health_change.emit(current_health, diff)
+	print(current_health)
+
+
+func kill():
+	get_node("/root/Main/World").get_child(0).queue_free()
+	get_node("/root/Main/UI").get_child(0).queue_free()
+	var death_screen_scene = load("res://Scenes/death_screen.tscn").instantiate()
+	get_node("/root/Main/UI").add_child(death_screen_scene)
