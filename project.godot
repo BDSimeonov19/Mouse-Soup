@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mouse Soup"
-run/main_scene="uid://bp8yefcexq8q1"
+run/main_scene="uid://brbqj7a7n7elk"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]

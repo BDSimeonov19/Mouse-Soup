@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://2j5p0dtdle1s"]
+
+[ext_resource type="Script" uid="uid://q1jya250m3id" path="res://Scripts/settings_menu.gd" id="1_h2y1r"]
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="2_3etfd"]
+[ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="3_rahb6"]
+[ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="4_fe37x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaqfp"]
+bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9073619, 0.79726005, 0.6803515, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2dne"]
+bg_color = Color(0.50363636, 0.40337807, 0.29561737, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5688208, 0.43386292, 0.28008035, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kysc"]
+bg_color = Color(0.6335806, 0.5179831, 0.39445058, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7260533, 0.568654, 0.39308274, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaqfp"]
+atlas = ExtResource("4_fe37x")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhmql"]
+atlas = ExtResource("4_fe37x")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhmql"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+bg_color = Color(0.6769476, 0.5845707, 0.46056116, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vr2p"]
+bg_color = Color(0.7989818, 0.5569042, 0.26982203, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f60ng"]
+bg_color = Color(0.90746105, 0.7099047, 0.46577847, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[node name="SettingsMenu" type="Control" unique_id=1945171290]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2y1r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=256898383]
+position = Vector2(160, 84)
+scale = Vector2(0.89134634, 0.89134604)
+texture = ExtResource("2_3etfd")
+
+[node name="Back" type="Button" parent="." unique_id=1715661402]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 144.0
+offset_right = 200.0
+offset_bottom = 164.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_rahb6")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_aaqfp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j2dne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6kysc")
+text = "Back"
+
+[node name="Title" type="Label" parent="." unique_id=72644305]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_rahb6")
+theme_override_font_sizes/font_size = 23
+text = "Settings"
+
+[node name="Volume Slider" type="HSlider" parent="." unique_id=946582074]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 142.0
+offset_top = 57.0
+offset_right = 238.0
+offset_bottom = 73.0
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = SubResource("AtlasTexture_aaqfp")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_lhmql")
+theme_override_styles/slider = SubResource("StyleBoxFlat_lhmql")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6vr2p")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_f60ng")
+value = 100.0
+ticks_on_borders = true
+
+[node name="Volume Label" type="Label" parent="." unique_id=247849501]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 53.0
+offset_right = 151.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_rahb6")
+theme_override_font_sizes/font_size = 19
+text = "Volume"
+
+[node name="Volume Percent" type="Label" parent="." unique_id=1140739950]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 59.0
+offset_right = 263.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("3_rahb6")
+theme_override_font_sizes/font_size = 10
+text = "100%"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

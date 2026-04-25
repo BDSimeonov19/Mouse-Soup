@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://brbqj7a7n7elk"]
 
-[ext_resource type="PackedScene" uid="uid://bp8yefcexq8q1" path="res://Scenes/forest.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c36emmaioid3n" path="res://Scenes/main_menu.tscn" id="2_bo1nx"]
 
 [node name="Main" type="Node" unique_id=1374269166]
 
-[node name="Timer" type="Timer" parent="." unique_id=298166852]
-wait_time = 999999.0
-autostart = true
+[node name="UI" type="Control" parent="." unique_id=1363569721]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Forest" parent="." unique_id=629864653 instance=ExtResource("2_8gbba")]
+[node name="MainMenu" parent="UI" unique_id=1732847701 instance=ExtResource("2_bo1nx")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 8.0
+anchor_bottom = 4.5
+
+[node name="World" type="Node2D" parent="." unique_id=1996050235]
