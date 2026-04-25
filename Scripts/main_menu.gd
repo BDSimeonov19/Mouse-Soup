@@ -1,9 +1,10 @@
 extends Control
 
-var level_scene = preload("res://Scenes/forest.tscn").instantiate()
 var hud_scene = preload("res://Scenes/hud.tscn").instantiate()
 
 func _on_begin_pressed() -> void:
+	var current_level_path = SaveManager.save_data["current_level_path"]
+	var level_scene = load(current_level_path).instantiate()
 	get_node("/root/Main/World").add_child(level_scene)
 	get_node("/root/Main/UI").add_child(hud_scene)
 	get_node("/root/Main").health_change.connect(hud_scene.update_health)

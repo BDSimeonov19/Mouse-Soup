@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4kp4b4md4rj8" path="res://Scenes/ladybug.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://ypgj0aiaf5ch" path="res://Scenes/collectable_item.tscn" id="5_u53w3"]
+[ext_resource type="Script" uid="uid://b0optswytu0q1" path="res://Scripts/forest_exit.gd" id="8_vh310"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("2_bo1nx")
@@ -126,6 +127,9 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igsr3"]
+size = Vector2(29, 62)
+
 [node name="Forest" type="Node" unique_id=629864653]
 script = ExtResource("1_wo0py")
 
@@ -182,6 +186,16 @@ tag = "potato"
 [node name="AnimatedSprite2D" parent="Potato" index="0" unique_id=1343627430]
 sprite_frames = SubResource("SpriteFrames_l3vkk")
 frame_progress = 0.0
+
+[node name="ForestExit" type="Area2D" parent="." unique_id=350192344]
+position = Vector2(1404, 177)
+script = ExtResource("8_vh310")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForestExit" unique_id=642232823]
+position = Vector2(2.5, -12)
+shape = SubResource("RectangleShape2D_igsr3")
+
+[connection signal="body_entered" from="ForestExit" to="ForestExit" method="_on_body_entered"]
 
 [editable path="Carrot"]
 [editable path="Broccoli"]
