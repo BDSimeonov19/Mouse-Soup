@@ -84,6 +84,7 @@ expand_margin_top = 1.0
 expand_margin_bottom = 1.0
 
 [node name="SettingsMenu" type="Control" unique_id=1945171290]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,12 +93,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h2y1r")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=256898383]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075291040]
 position = Vector2(160, 84)
 scale = Vector2(0.89134634, 0.89134604)
 texture = ExtResource("2_3etfd")
 
-[node name="Back" type="Button" parent="." unique_id=1715661402]
+[node name="Back" type="Button" parent="." unique_id=939024344]
 layout_mode = 0
 offset_left = 120.0
 offset_top = 144.0
@@ -111,7 +112,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_j2dne")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6kysc")
 text = "Back"
 
-[node name="Title" type="Label" parent="." unique_id=72644305]
+[node name="Title" type="Label" parent="." unique_id=1800734721]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 8.0
@@ -121,7 +122,7 @@ theme_override_fonts/font = ExtResource("3_rahb6")
 theme_override_font_sizes/font_size = 23
 text = "Settings"
 
-[node name="Volume Slider" type="HSlider" parent="." unique_id=946582074]
+[node name="Volume Slider" type="HSlider" parent="." unique_id=24002034]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 142.0
@@ -137,7 +138,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_f60ng")
 value = 100.0
 ticks_on_borders = true
 
-[node name="Volume Label" type="Label" parent="." unique_id=247849501]
+[node name="Volume Label" type="Label" parent="." unique_id=550054701]
 layout_mode = 0
 offset_left = 92.0
 offset_top = 53.0
@@ -147,7 +148,7 @@ theme_override_fonts/font = ExtResource("3_rahb6")
 theme_override_font_sizes/font_size = 19
 text = "Volume"
 
-[node name="Volume Percent" type="Label" parent="." unique_id=1140739950]
+[node name="Volume Percent" type="Label" parent="." unique_id=1397207486]
 layout_mode = 0
 offset_left = 245.0
 offset_top = 59.0
@@ -158,3 +159,4 @@ theme_override_font_sizes/font_size = 10
 text = "100%"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Volume Slider" to="." method="_on_volume_slider_value_changed"]

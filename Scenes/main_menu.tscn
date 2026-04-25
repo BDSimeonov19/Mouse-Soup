@@ -44,6 +44,7 @@ corner_radius_bottom_left = 6
 corner_detail = 18
 
 [node name="MainMenu" type="Control" unique_id=1732847701]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,20 +53,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ehe0")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1206645719]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1654443225]
 position = Vector2(160, 84)
 scale = Vector2(0.89134634, 0.89134604)
 texture = ExtResource("1_48xlc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=271547595]
-layout_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=945156526]
+layout_mode = 0
 offset_left = 199.0
 offset_top = 52.0
 offset_right = 295.0
 offset_bottom = 128.0
 theme_override_constants/separation = 9
 
-[node name="Begin" type="Button" parent="VBoxContainer" unique_id=312124454]
+[node name="Begin" type="Button" parent="VBoxContainer" unique_id=1142679842]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_28flt")
@@ -75,7 +76,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
 text = "Begin"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=142554295]
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1457308184]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_28flt")
@@ -85,7 +86,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
 text = "Settings"
 
-[node name="Quit" type="Button" parent="VBoxContainer" unique_id=55904027]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1617614480]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_28flt")
@@ -95,7 +96,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
 text = "Quit"
 
-[node name="Title" type="Label" parent="." unique_id=561879338]
+[node name="Title" type="Label" parent="." unique_id=1009826477]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 62.0
