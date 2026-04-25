@@ -1,0 +1,62 @@
+[gd_scene format=4 uid="uid://biigeg3bh58bc"]
+
+[ext_resource type="Texture2D" uid="uid://caxe86sbrnd4x" path="res://Assets/Graphics/DocksBackground.png" id="1_qmedp"]
+[ext_resource type="Texture2D" uid="uid://djl2hv5ljy08x" path="res://Assets/Graphics/Clouds.png" id="2_ogy8s"]
+[ext_resource type="Texture2D" uid="uid://cqe3l7ae1fhed" path="res://Assets/Graphics/DocksGround.png" id="2_tacti"]
+[ext_resource type="PackedScene" uid="uid://bcuxx67ofl6a0" path="res://Scenes/mouse.tscn" id="3_ogy8s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ic4fl"]
+texture = ExtResource("2_tacti")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -2, 16, -2, 16, 4, -10, 4)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 8, -2, 8, 4, -16, 4)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 16, -2, 16, 4, -8, 4)
+1:1/0/physics_layer_0/polygon_0/one_way = true
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
+2:1/0/physics_layer_0/polygon_0/one_way = true
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 6, -2, 6, 4, -16, 4)
+3:1/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSet" id="TileSet_6tqij"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ic4fl")
+
+[node name="Docks" type="Node" unique_id=952326508]
+
+[node name="Background" type="Node2D" parent="." unique_id=440231823]
+
+[node name="Sky" type="Parallax2D" parent="Background" unique_id=1038658270]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(1, -19)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Sky" unique_id=1600081968]
+position = Vector2(447, 109)
+texture = ExtResource("1_qmedp")
+
+[node name="Clouds" type="Parallax2D" parent="Background" unique_id=518961235]
+scroll_scale = Vector2(0.05, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds" unique_id=1748495189]
+texture = ExtResource("2_ogy8s")
+offset = Vector2(160, 90)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1748214064]
+tile_map_data = PackedByteArray("AAAAAAQAAAAAAAAAAAABAAQAAAABAAAAAAACAAQAAAADAAAAAAADAAQAAAAAAAEAAAAEAAQAAAABAAAAAAAFAAQAAAADAAAAAAAGAAQAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAADAAAAAAAJAAQAAAADAAEAAAADAAMAAAACAAEAAAACAAMAAAABAAEAAAAEAAMAAAADAAEAAAAGAAMAAAACAAEAAAAFAAMAAAABAAEAAAAHAAMAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_6tqij")
+
+[node name="Mouse" parent="." unique_id=1392289620 instance=ExtResource("3_ogy8s")]
+position = Vector2(15, 114)
