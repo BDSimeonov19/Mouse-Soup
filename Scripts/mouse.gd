@@ -78,6 +78,7 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 
 func take_damage() -> void:
 	health -= 1;
+	get_node("/root/Main").take_damage(health, -1)
 	animated_sprite.modulate = Color(1, 0, 0, 1)
 	await get_tree().create_timer(0.5).timeout
 	animated_sprite.modulate = Color(1, 1, 1, 1)

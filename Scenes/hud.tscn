@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cy3x3w4svbmyo"]
+
+[ext_resource type="Script" uid="uid://3yxtjr11a7ed" path="res://Scripts/hud.gd" id="1_fccik"]
+[ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="2_bjfho"]
+[ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="3_bjfho"]
+
+[node name="Hud" type="Control" unique_id=1790852836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fccik")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1172185052]
+
+[node name="HP 1" type="Sprite2D" parent="CanvasLayer" unique_id=1599927061]
+position = Vector2(307, 10)
+texture = ExtResource("2_bjfho")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="HP 2" type="Sprite2D" parent="CanvasLayer" unique_id=567808904]
+position = Vector2(291, 10)
+texture = ExtResource("2_bjfho")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="HP 3" type="Sprite2D" parent="CanvasLayer" unique_id=1396532424]
+position = Vector2(273, 10)
+texture = ExtResource("2_bjfho")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=211332497]
+offset_left = 238.0
+offset_top = 3.0
+offset_right = 278.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("3_bjfho")
+theme_override_font_sizes/font_size = 12
+text = "Health"

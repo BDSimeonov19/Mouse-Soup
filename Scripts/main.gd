@@ -5,6 +5,8 @@ var is_pausable := false
 var save_data := {"items_collected": [], "current_level_path" : ""}
 var settings := {"volume": 100}
 
+signal health_change(new_health, health_change)
+
 func _ready() -> void:
 	load_game()
 
@@ -46,3 +48,6 @@ func load_game():
 		return
 	
 	settings = json.data
+
+func take_damage(current_health, diff):
+	health_change.emit(current_health, diff)
