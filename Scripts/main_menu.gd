@@ -17,5 +17,5 @@ func _on_settings_pressed() -> void:
 
 
 func _on_quit_pressed() -> void:
-	get_node("/root/Main").save_game()
+	SaveManager.save_game()
 	get_tree().quit()

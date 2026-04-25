@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 ItemsManager="*uid://dpn7ej0tay23a"
+SaveManager="*uid://bpytoo21hs2m2"
 
 [display]
 
