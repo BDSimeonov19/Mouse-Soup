@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://djl2hv5ljy08x" path="res://Assets/Graphics/Clouds.png" id="2_ogy8s"]
 [ext_resource type="Texture2D" uid="uid://cqe3l7ae1fhed" path="res://Assets/Graphics/DocksGround.png" id="2_tacti"]
 [ext_resource type="PackedScene" uid="uid://bcuxx67ofl6a0" path="res://Scenes/mouse.tscn" id="3_ogy8s"]
-[ext_resource type="Shader" uid="uid://dbwyw6mhspqs4" path="res://Scripts/reflections.gdshader" id="5_ic4fl"]
-[ext_resource type="Script" uid="uid://e4uxajw4x50o" path="res://Scripts/water.gd" id="6_6tqij"]
+[ext_resource type="Shader" uid="uid://dbwyw6mhspqs4" path="res://Scripts/Docks/reflections.gdshader" id="5_ic4fl"]
+[ext_resource type="Script" uid="uid://e4uxajw4x50o" path="res://Scripts/Docks/water.gd" id="6_6tqij"]
+[ext_resource type="PackedScene" uid="uid://bgn5vxy1juti7" path="res://Scenes/seagull.tscn" id="7_6tqij"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ic4fl"]
 texture = ExtResource("2_tacti")
@@ -48,7 +49,7 @@ shader_parameter/fast_noise = SubResource("NoiseTexture2D_6tqij")
 shader_parameter/speed = Vector2(0.05, 0.07)
 shader_parameter/wave_strength = 0.1
 shader_parameter/scale_y = 200.0
-shader_parameter/y_zoom = 3.7974994
+shader_parameter/y_zoom = 2.593743
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lqw2r"]
 
@@ -80,9 +81,20 @@ tile_set = SubResource("TileSet_6tqij")
 [node name="Mouse" parent="." unique_id=1392289620 instance=ExtResource("3_ogy8s")]
 position = Vector2(15, 114)
 
+[node name="Seagull" parent="." unique_id=1793869370 instance=ExtResource("7_6tqij")]
+position = Vector2(245.90826, 131.71686)
+
+[node name="FlyingReturnHome" parent="Seagull/StateMachine" parent_id_path=PackedInt32Array(1793869370, 1390928440) index="1" unique_id=1409439603 node_paths=PackedStringArray("home")]
+home = NodePath("../../../Home1")
+
+[node name="Home1" type="Marker2D" parent="." unique_id=1925129990]
+position = Vector2(197, 44)
+
 [node name="Water" type="Sprite2D" parent="." unique_id=713173947]
 material = SubResource("ShaderMaterial_aj7fa")
 position = Vector2(203.00002, 199.00002)
 scale = Vector2(406.00003, 82.000015)
 texture = SubResource("CanvasTexture_lqw2r")
 script = ExtResource("6_6tqij")
+
+[editable path="Seagull"]

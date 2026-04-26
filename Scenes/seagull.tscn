@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://bgn5vxy1juti7"]
+
+[ext_resource type="Script" uid="uid://318xjtyebopg" path="res://Scripts/Characters/seagull.gd" id="1_pmc4f"]
+[ext_resource type="Texture2D" uid="uid://b0fgk8hfbcpu5" path="res://Assets/Graphics/Seagull.png" id="2_rap47"]
+[ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_1f55h"]
+[ext_resource type="Script" uid="uid://beo2dh2xw8ate" path="res://Scripts/State Machine/state_machine.gd" id="4_fv752"]
+[ext_resource type="Script" uid="uid://b1l2ohdwn27gg" path="res://Scripts/State Machine/flying_follow.gd" id="5_rap47"]
+[ext_resource type="Script" uid="uid://bjljt2e6lg1tt" path="res://Scripts/State Machine/flying_return_home.gd" id="6_1f55h"]
+[ext_resource type="Script" uid="uid://c0m5prbkk1uwf" path="res://Scripts/flying_charge.gd" id="7_fv752"]
+[ext_resource type="Script" uid="uid://koxtwr3p0fri" path="res://Scripts/flying_idle.gd" id="8_a8e7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8e7d"]
+atlas = ExtResource("2_rap47")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjm4u"]
+atlas = ExtResource("2_rap47")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io0ql"]
+atlas = ExtResource("2_rap47")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov1p1"]
+atlas = ExtResource("2_rap47")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj47d"]
+atlas = ExtResource("2_rap47")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8qxd"]
+atlas = ExtResource("2_rap47")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ll820"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8e7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjm4u")
+}],
+"loop": true,
+"name": &"charge_windup",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io0ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov1p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uj47d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8qxd")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_io0ql"]
+radius = 4.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ofb64"]
+radius = 5.0
+height = 28.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ov1p1"]
+radius = 5.0
+height = 28.0
+
+[node name="Seagull" type="CharacterBody2D" unique_id=1793869370]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_pmc4f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=492934969]
+sprite_frames = SubResource("SpriteFrames_ll820")
+animation = &"charge_windup"
+autoplay = "fly"
+frame_progress = 0.5820335
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=98874925]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_io0ql")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1577010454]
+collision_layer = 2
+script = ExtResource("3_1f55h")
+metadata/_custom_type_script = "uid://b2h13x0m682pb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1104878734]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ofb64")
+debug_color = Color(2.4065375e-06, 0.5715353, 0.841713, 0.41960785)
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1978764036]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=909370491]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ov1p1")
+debug_color = Color(0.79155654, 0.08667251, 0.99999994, 0.41960785)
+
+[node name="StateMachine" type="Node" parent="." unique_id=1390928440 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_fv752")
+initial_state = NodePath("FlyingReturnHome")
+
+[node name="FlyingFollow" type="Node" parent="StateMachine" unique_id=1901530652 node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_rap47")
+enemy = NodePath("../..")
+
+[node name="FlyingReturnHome" type="Node" parent="StateMachine" unique_id=1409439603 node_paths=PackedStringArray("enemy")]
+script = ExtResource("6_1f55h")
+enemy = NodePath("../..")
+
+[node name="FlyingCharge" type="Node" parent="StateMachine" unique_id=1019377726 node_paths=PackedStringArray("enemy")]
+script = ExtResource("7_fv752")
+enemy = NodePath("../..")
+
+[node name="FlyingIdle" type="Node" parent="StateMachine" unique_id=1193783247 node_paths=PackedStringArray("enemy")]
+script = ExtResource("8_a8e7d")
+enemy = NodePath("../..")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcuxx67ofl6a0"]
 
-[ext_resource type="Script" uid="uid://706qjlndbal3" path="res://Scripts/mouse.gd" id="1_3ber4"]
+[ext_resource type="Script" uid="uid://706qjlndbal3" path="res://Scripts/Characters/mouse.gd" id="1_3ber4"]
 [ext_resource type="Texture2D" uid="uid://sv8v6sebq4ie" path="res://Assets/Graphics/MouseSpriteSheet.png" id="1_dev0r"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_kxv04"]
 
@@ -108,7 +108,7 @@ size = Vector2(15, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxv04"]
 size = Vector2(10, 28)
 
-[node name="Mouse" type="CharacterBody2D" unique_id=1392289620]
+[node name="Mouse" type="CharacterBody2D" unique_id=1392289620 groups=["player"]]
 script = ExtResource("1_3ber4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2013679298]

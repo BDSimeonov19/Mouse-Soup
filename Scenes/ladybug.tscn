@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://4kp4b4md4rj8"]
 
-[ext_resource type="Script" uid="uid://0laj1pacnjjb" path="res://Scripts/ladybug.gd" id="1_2lt8f"]
+[ext_resource type="Script" uid="uid://0laj1pacnjjb" path="res://Scripts/Characters/ladybug.gd" id="1_2lt8f"]
 [ext_resource type="Texture2D" uid="uid://cd03fhw60nfef" path="res://Assets/Graphics/LadybugSpriteSheet.png" id="1_5ymec"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_tji8x"]
 

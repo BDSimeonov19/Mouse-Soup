@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://di1x5e2gd41sg"]
 
 [ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="1_rwas2"]
-[ext_resource type="Script" uid="uid://lkoup17ci8ng" path="res://Scripts/death_screen.gd" id="1_tseak"]
+[ext_resource type="Script" uid="uid://lkoup17ci8ng" path="res://Scripts/UI/death_screen.gd" id="1_tseak"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_tseak"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amiou"]
