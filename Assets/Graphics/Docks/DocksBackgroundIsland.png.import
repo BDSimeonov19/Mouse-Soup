@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4es5bgmp067d"
-path="res://.godot/imported/DocksBackgroundSea.png-4632c46fe136a98d23a8b01ad2efb231.ctex"
+uid="uid://dd250d2n3cjrf"
+path="res://.godot/imported/DocksBackgroundIsland.png-b28d0f5ce2700d29d94795175a57852b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/DocksBackgroundSea.png"
-dest_files=["res://.godot/imported/DocksBackgroundSea.png-4632c46fe136a98d23a8b01ad2efb231.ctex"]
+source_file="res://Assets/Graphics/Docks/DocksBackgroundIsland.png"
+dest_files=["res://.godot/imported/DocksBackgroundIsland.png-b28d0f5ce2700d29d94795175a57852b.ctex"]
 
 [params]
 

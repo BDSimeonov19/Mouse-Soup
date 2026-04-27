@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqe3l7ae1fhed"
-path="res://.godot/imported/DocksGround.png-48bd1ce3281f85d25ff322fc4f6abcc1.ctex"
+uid="uid://cd03fhw60nfef"
+path="res://.godot/imported/LadybugSpriteSheet.png-f733fee196cca6cff0075d0d25a9cc12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/DocksGround.png"
-dest_files=["res://.godot/imported/DocksGround.png-48bd1ce3281f85d25ff322fc4f6abcc1.ctex"]
+source_file="res://Assets/Graphics/Characters/LadybugSpriteSheet.png"
+dest_files=["res://.godot/imported/LadybugSpriteSheet.png-f733fee196cca6cff0075d0d25a9cc12.ctex"]
 
 [params]
 

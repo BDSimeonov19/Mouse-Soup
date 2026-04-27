@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgn5vxy1juti7"]
 
 [ext_resource type="Script" uid="uid://318xjtyebopg" path="res://Scripts/Characters/seagull.gd" id="1_pmc4f"]
-[ext_resource type="Texture2D" uid="uid://b0fgk8hfbcpu5" path="res://Assets/Graphics/Seagull.png" id="2_rap47"]
+[ext_resource type="Texture2D" uid="uid://b0fgk8hfbcpu5" path="res://Assets/Graphics/Characters/Seagull.png" id="2_rap47"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_1f55h"]
 [ext_resource type="Script" uid="uid://beo2dh2xw8ate" path="res://Scripts/State Machine/state_machine.gd" id="4_fv752"]
 [ext_resource type="Script" uid="uid://b1l2ohdwn27gg" path="res://Scripts/State Machine/flying_follow.gd" id="5_rap47"]

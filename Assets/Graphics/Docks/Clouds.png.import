@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sv8v6sebq4ie"
-path="res://.godot/imported/MouseSpriteSheet.png-00a426555270748f6eca70f13e83abd4.ctex"
+uid="uid://djl2hv5ljy08x"
+path="res://.godot/imported/Clouds.png-0ae2eb15567558550cd51f6f274d6a79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/MouseSpriteSheet.png"
-dest_files=["res://.godot/imported/MouseSpriteSheet.png-00a426555270748f6eca70f13e83abd4.ctex"]
+source_file="res://Assets/Graphics/Docks/Clouds.png"
+dest_files=["res://.godot/imported/Clouds.png-0ae2eb15567558550cd51f6f274d6a79.ctex"]
 
 [params]
 

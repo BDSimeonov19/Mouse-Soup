@@ -15,6 +15,13 @@ script = ExtResource("1_fccik")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1172185052]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1995001017]
+offset_left = 232.0
+offset_top = 2.0
+offset_right = 317.0
+offset_bottom = 17.0
+color = Color(0.36203894, 0.35111478, 0.36567998, 0.4509804)
+
 [node name="HP 1" type="Sprite2D" parent="CanvasLayer" unique_id=1599927061]
 position = Vector2(307, 10)
 texture = ExtResource("2_bjfho")

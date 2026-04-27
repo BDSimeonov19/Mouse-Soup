@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd03fhw60nfef"
-path="res://.godot/imported/LadybugSpriteSheet.png-b641135b638bacd833db7382b5c3d947.ctex"
+uid="uid://duhs6yqfql1hv"
+path="res://.godot/imported/FieldBackgroundNearHill.png-4c491e064a946ffec7fe6b94924f20a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/LadybugSpriteSheet.png"
-dest_files=["res://.godot/imported/LadybugSpriteSheet.png-b641135b638bacd833db7382b5c3d947.ctex"]
+source_file="res://Assets/Graphics/Field/FieldBackgroundNearHill.png"
+dest_files=["res://.godot/imported/FieldBackgroundNearHill.png-4c491e064a946ffec7fe6b94924f20a9.ctex"]
 
 [params]
 

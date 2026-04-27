@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1mbkoucrknlf"
-path="res://.godot/imported/DocksBackgroundSky.png-a991024414695bb26411d26625377bd1.ctex"
+uid="uid://b0fgk8hfbcpu5"
+path="res://.godot/imported/Seagull.png-d813c0251533eda2e5e441af86f1daab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/DocksBackgroundSky.png"
-dest_files=["res://.godot/imported/DocksBackgroundSky.png-a991024414695bb26411d26625377bd1.ctex"]
+source_file="res://Assets/Graphics/Characters/Seagull.png"
+dest_files=["res://.godot/imported/Seagull.png-d813c0251533eda2e5e441af86f1daab.ctex"]
 
 [params]
 

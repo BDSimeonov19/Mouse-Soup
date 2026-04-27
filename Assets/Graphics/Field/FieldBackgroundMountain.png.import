@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doqm4hh8y3khx"
-path="res://.godot/imported/FallBackground.png-be48d38a9435e69eaf557a7021304fb7.ctex"
+uid="uid://vcxevl1r6cqg"
+path="res://.godot/imported/FieldBackgroundMountain.png-33323aed3577eb8760476986f076f67d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/FallBackground.png"
-dest_files=["res://.godot/imported/FallBackground.png-be48d38a9435e69eaf557a7021304fb7.ctex"]
+source_file="res://Assets/Graphics/Field/FieldBackgroundMountain.png"
+dest_files=["res://.godot/imported/FieldBackgroundMountain.png-33323aed3577eb8760476986f076f67d.ctex"]
 
 [params]
 

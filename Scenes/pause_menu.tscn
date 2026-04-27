@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cn3cjd18033i2"]
 
 [ext_resource type="Script" uid="uid://5mtwwwxa61lg" path="res://Scripts/UI/pause_menu.gd" id="1_1och7"]
-[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="1_k0w1u"]
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_k0w1u"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_1och7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpi0q"]

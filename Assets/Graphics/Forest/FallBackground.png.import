@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0fgk8hfbcpu5"
-path="res://.godot/imported/Seagull.png-a6c7fdf75a0d9cca1da279a1cf9c2c23.ctex"
+uid="uid://doqm4hh8y3khx"
+path="res://.godot/imported/FallBackground.png-f69258604758316b3885c062d9a2f470.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Seagull.png"
-dest_files=["res://.godot/imported/Seagull.png-a6c7fdf75a0d9cca1da279a1cf9c2c23.ctex"]
+source_file="res://Assets/Graphics/Forest/FallBackground.png"
+dest_files=["res://.godot/imported/FallBackground.png-f69258604758316b3885c062d9a2f470.ctex"]
 
 [params]
 

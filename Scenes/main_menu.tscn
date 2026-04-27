@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp8h1kosulp5i" path="res://Scripts/UI/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_48xlc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
 bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)

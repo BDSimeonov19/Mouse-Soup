@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djl2hv5ljy08x"
-path="res://.godot/imported/Clouds.png-d8a03d3b2c33094f193082ce1faad064.ctex"
+uid="uid://dacw4noiixyr4"
+path="res://.godot/imported/FieldBackgroundFarHill.png-6bd192ab170f749a2b168e0afdb5dbf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Clouds.png"
-dest_files=["res://.godot/imported/Clouds.png-d8a03d3b2c33094f193082ce1faad064.ctex"]
+source_file="res://Assets/Graphics/Field/FieldBackgroundFarHill.png"
+dest_files=["res://.godot/imported/FieldBackgroundFarHill.png-6bd192ab170f749a2b168e0afdb5dbf8.ctex"]
 
 [params]
 

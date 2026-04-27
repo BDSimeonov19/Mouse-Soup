@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://bp8yefcexq8q1"]
 
-[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/FallBackground.png" id="1_8gbba"]
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bcuxx67ofl6a0" path="res://Scenes/mouse.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dnf8lk8kal32x" path="res://Scripts/Forest/forest.gd" id="1_wo0py"]
-[ext_resource type="Texture2D" uid="uid://bnry0xr8rmk2t" path="res://Assets/Graphics/FallGround.png" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bnry0xr8rmk2t" path="res://Assets/Graphics/Forest/FallGround.png" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://4kp4b4md4rj8" path="res://Scenes/ladybug.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://ypgj0aiaf5ch" path="res://Scenes/collectable_item.tscn" id="5_u53w3"]
