@@ -7,7 +7,7 @@ func _on_begin_pressed() -> void:
 	var level_scene = load(current_level_path).instantiate()
 	get_node("/root/Main/World").add_child(level_scene)
 	get_node("/root/Main/UI").add_child(hud_scene)
-	get_node("/root/Main").health_change.connect(hud_scene.update_health)
+	PlayerManager.health_change.connect(hud_scene.update_health)
 	
 	get_node("/root/Main").is_pausable = true
 	queue_free()

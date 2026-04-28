@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 ItemsManager="*uid://dpn7ej0tay23a"
 SaveManager="*uid://bpytoo21hs2m2"
+PlayerManager="*uid://q1ea487hetiu"
 
 [display]
 

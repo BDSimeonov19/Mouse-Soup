@@ -14,7 +14,10 @@ var time_since_last_floor := 0.0
 
 var is_attacking := false
 
-var health := 3
+var health : int
+
+func _ready() -> void:
+	health = PlayerManager.health
 
 func _process(delta: float) -> void:
 	handle_attack_animations()
@@ -78,10 +81,11 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 
 func take_damage() -> void:
 	health -= 1;
-	get_node("/root/Main").take_damage(health, -1)
+	PlayerManager.change_health(health, -1)
 	sprite.modulate = Color(1, 0, 0, 1)
 	await get_tree().create_timer(0.5).timeout
 	sprite.modulate = Color(1, 1, 1, 1)
-	if health == 0:
-		#get_node("/root/Main").kill();
+	if health <= 0:
+		#PlayerManager.kill();
 		health = 3
+		PlayerManager.change_health(health, 3)
