@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://beo2dh2xw8ate" path="res://Scripts/State Machine/state_machine.gd" id="4_fv752"]
 [ext_resource type="Script" uid="uid://b1l2ohdwn27gg" path="res://Scripts/State Machine/flying_follow.gd" id="5_rap47"]
 [ext_resource type="Script" uid="uid://bjljt2e6lg1tt" path="res://Scripts/State Machine/flying_return_home.gd" id="6_1f55h"]
-[ext_resource type="Script" uid="uid://c0m5prbkk1uwf" path="res://Scripts/flying_charge.gd" id="7_fv752"]
-[ext_resource type="Script" uid="uid://koxtwr3p0fri" path="res://Scripts/flying_idle.gd" id="8_a8e7d"]
+[ext_resource type="Script" uid="uid://c0m5prbkk1uwf" path="res://Scripts/State Machine/flying_charge.gd" id="7_fv752"]
+[ext_resource type="Script" uid="uid://koxtwr3p0fri" path="res://Scripts/State Machine/flying_idle.gd" id="8_a8e7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8e7d"]
 atlas = ExtResource("2_rap47")

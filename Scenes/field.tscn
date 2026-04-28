@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vcxevl1r6cqg" path="res://Assets/Graphics/Field/FieldBackgroundMountain.png" id="2_xvgtc"]
 [ext_resource type="Texture2D" uid="uid://dacw4noiixyr4" path="res://Assets/Graphics/Field/FieldBackgroundFarHill.png" id="3_kvtm8"]
 [ext_resource type="Texture2D" uid="uid://duhs6yqfql1hv" path="res://Assets/Graphics/Field/FieldBackgroundNearHill.png" id="4_q1k20"]
+[ext_resource type="PackedScene" uid="uid://ybutudaxkcov" path="res://Scenes/frog.tscn" id="7_xvgtc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2mji"]
 texture = ExtResource("1_8juqs")
@@ -100,3 +101,6 @@ tile_set = SubResource("TileSet_bbyqf")
 
 [node name="Mouse" parent="." unique_id=1392289620 instance=ExtResource("2_s2mji")]
 position = Vector2(51.66532, 130.96515)
+
+[node name="Frog" parent="." unique_id=838838442 instance=ExtResource("7_xvgtc")]
+position = Vector2(273, 128)
