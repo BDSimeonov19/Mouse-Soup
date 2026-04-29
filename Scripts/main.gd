@@ -1,11 +1,12 @@
 extends Node
 
 var is_pausable := false
-
+var master_bus_index = AudioServer.get_bus_index("Master")
 
 
 func _ready() -> void:
 	SaveManager.load_game()
+	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(SaveManager.settings["volume"]/100))
 
 func _process(delta: float) -> void:
 	developer_reset_game()
