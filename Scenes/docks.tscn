@@ -9,6 +9,7 @@
 [ext_resource type="Shader" uid="uid://dbwyw6mhspqs4" path="res://Scripts/Docks/reflections.gdshader" id="5_ic4fl"]
 [ext_resource type="Script" uid="uid://e4uxajw4x50o" path="res://Scripts/Docks/water.gd" id="6_6tqij"]
 [ext_resource type="PackedScene" uid="uid://bgn5vxy1juti7" path="res://Scenes/seagull.tscn" id="7_6tqij"]
+[ext_resource type="Script" uid="uid://rjv87k3ngph1" path="res://Scripts/docks_exit.gd" id="10_1h5l0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ic4fl"]
 texture = ExtResource("2_tacti")
@@ -51,9 +52,12 @@ shader_parameter/fast_noise = SubResource("NoiseTexture2D_sjach")
 shader_parameter/speed = Vector2(0.05, 0.07)
 shader_parameter/wave_strength = 0.1
 shader_parameter/scale_y = 200.0
-shader_parameter/y_zoom = 1.3310001
+shader_parameter/y_zoom = 2.1435893
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lqw2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2r"]
+size = Vector2(20.53418, 63)
 
 [node name="Docks" type="Node" unique_id=952326508]
 
@@ -113,5 +117,15 @@ position = Vector2(725.5, 204.5)
 scale = Vector2(1451, 96.99998)
 texture = SubResource("CanvasTexture_lqw2r")
 script = ExtResource("6_6tqij")
+
+[node name="DocksExit" type="Area2D" parent="." unique_id=1107694247]
+position = Vector2(456.46582, 114.202286)
+script = ExtResource("10_1h5l0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DocksExit" unique_id=1284059631]
+position = Vector2(0.26708984, -3.7022858)
+shape = SubResource("RectangleShape2D_lqw2r")
+
+[connection signal="body_entered" from="DocksExit" to="DocksExit" method="_on_body_entered"]
 
 [editable path="Seagull"]

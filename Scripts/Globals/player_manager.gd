@@ -9,7 +9,6 @@ func change_health(current_health, diff):
 	health_change.emit(current_health, diff)
 	print(current_health)
 
-
 func kill():
 	get_node("/root/Main/World").get_child(0).queue_free()
 	get_node("/root/Main/UI").get_child(0).queue_free()

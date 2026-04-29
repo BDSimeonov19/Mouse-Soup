@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://3w36kcakfo6f"]
+
+[ext_resource type="Script" uid="uid://b0ljok3vyfynm" path="res://Scripts/randomized_audio_stream_player.gd" id="1_eoprb"]
+
+[node name="RandomizedAudioStreamPlayer" type="AudioStreamPlayer" unique_id=920011000]
+script = ExtResource("1_eoprb")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

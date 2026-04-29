@@ -2,12 +2,6 @@ extends Control
 
 @onready var cheese = [$"CanvasLayer/HP 1", $"CanvasLayer/HP 2", $"CanvasLayer/HP 3"]
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
-
 func update_health(current_health, health_change):
 	for i in range(3):
 		var frame = 0 if i < current_health else 1

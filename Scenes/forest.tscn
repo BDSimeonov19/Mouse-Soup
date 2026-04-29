@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://ypgj0aiaf5ch" path="res://Scenes/collectable_item.tscn" id="5_u53w3"]
 [ext_resource type="Script" uid="uid://b0optswytu0q1" path="res://Scripts/Forest/forest_exit.gd" id="8_vh310"]
+[ext_resource type="AudioStream" uid="uid://dclcpyqk76v2g" path="res://Assets/Sounds/Ambiance/BirdsAmbiance.mp3" id="9_igsr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("2_bo1nx")
@@ -194,6 +195,12 @@ script = ExtResource("8_vh310")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ForestExit" unique_id=642232823]
 position = Vector2(2.5, -12)
 shape = SubResource("RectangleShape2D_igsr3")
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=826974192]
+stream = ExtResource("9_igsr3")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="ForestExit" to="ForestExit" method="_on_body_entered"]
 

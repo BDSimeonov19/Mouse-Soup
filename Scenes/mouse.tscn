@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://706qjlndbal3" path="res://Scripts/Characters/mouse.gd" id="1_3ber4"]
 [ext_resource type="Texture2D" uid="uid://sv8v6sebq4ie" path="res://Assets/Graphics/Characters/MouseSpriteSheet.png" id="1_dev0r"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="3_kxv04"]
+[ext_resource type="AudioStream" uid="uid://cmoajcay1btau" path="res://Assets/Sounds/SFX/Whoosh1.mp3" id="4_dbb7t"]
+[ext_resource type="Script" uid="uid://b0ljok3vyfynm" path="res://Scripts/randomized_audio_stream_player.gd" id="5_yrs1a"]
+[ext_resource type="AudioStream" uid="uid://bn5qxkcsv1pf8" path="res://Assets/Sounds/SFX/Whoosh2.mp3" id="6_1rou4"]
+[ext_resource type="AudioStream" uid="uid://bk3wxsyc8bsk4" path="res://Assets/Sounds/SFX/GrassStep1.mp3" id="8_erwuk"]
+[ext_resource type="AudioStream" uid="uid://whbk4sqt55yl" path="res://Assets/Sounds/SFX/MouseSqueek.mp3" id="8_jdcir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwmpi"]
 atlas = ExtResource("1_dev0r")
@@ -151,5 +156,35 @@ position = Vector2(12, -1)
 shape = SubResource("RectangleShape2D_kxv04")
 disabled = true
 debug_color = Color(0.35566044, 0.4819963, 1, 0.41960785)
+
+[node name="SwingSFX" type="AudioStreamPlayer" parent="." unique_id=951539321]
+stream = ExtResource("4_dbb7t")
+script = ExtResource("5_yrs1a")
+min_pitch = 0.8
+max_pitch = 1.2
+metadata/_custom_type_script = "uid://b0ljok3vyfynm"
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="." unique_id=293888532]
+stream = ExtResource("6_1rou4")
+volume_db = -8.0
+script = ExtResource("5_yrs1a")
+min_pitch = 0.8
+max_pitch = 1.2
+metadata/_custom_type_script = "uid://b0ljok3vyfynm"
+
+[node name="HurtSFX" type="AudioStreamPlayer" parent="." unique_id=440486427]
+stream = ExtResource("8_jdcir")
+script = ExtResource("5_yrs1a")
+min_pitch = 0.8
+max_pitch = 1.2
+metadata/_custom_type_script = "uid://b0ljok3vyfynm"
+
+[node name="StepSFX" type="AudioStreamPlayer" parent="." unique_id=1284951422]
+stream = ExtResource("8_erwuk")
+script = ExtResource("5_yrs1a")
+min_pitch = 0.8
+max_pitch = 1.2
+auto_loop = true
+metadata/_custom_type_script = "uid://b0ljok3vyfynm"
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
