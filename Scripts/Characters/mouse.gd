@@ -5,8 +5,8 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 var step_sfx_paths = {
-	"Forest" : ["res://Assets/Sounds/SFX/LeavesStep1.mp3", -18],
-	"Docks" : ["res://Assets/Sounds/SFX/DockStep1.mp3", -5],
+	"Forest" : ["res://Assets/Sounds/SFX/LeavesStep1.mp3", -22],
+	"Docks" : ["res://Assets/Sounds/SFX/DockStep1.mp3", -6],
 	"Field" : ["res://Assets/Sounds/SFX/GrassStep1.mp3", 0],
 }
 

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://biigeg3bh58bc"]
 
 [ext_resource type="Texture2D" uid="uid://1mbkoucrknlf" path="res://Assets/Graphics/Docks/DocksBackgroundSky.png" id="1_lqw2r"]
+[ext_resource type="Script" uid="uid://pnjqi7qaq75e" path="res://Scripts/docks.gd" id="1_x64gp"]
 [ext_resource type="Texture2D" uid="uid://djl2hv5ljy08x" path="res://Assets/Graphics/Docks/Clouds.png" id="2_ogy8s"]
 [ext_resource type="Texture2D" uid="uid://cqe3l7ae1fhed" path="res://Assets/Graphics/Docks/DocksGround.png" id="2_tacti"]
 [ext_resource type="Texture2D" uid="uid://d4es5bgmp067d" path="res://Assets/Graphics/Docks/DocksBackgroundSea.png" id="3_1h5l0"]
@@ -10,6 +11,9 @@
 [ext_resource type="Script" uid="uid://e4uxajw4x50o" path="res://Scripts/Docks/water.gd" id="6_6tqij"]
 [ext_resource type="PackedScene" uid="uid://bgn5vxy1juti7" path="res://Scenes/seagull.tscn" id="7_6tqij"]
 [ext_resource type="Script" uid="uid://rjv87k3ngph1" path="res://Scripts/docks_exit.gd" id="10_1h5l0"]
+[ext_resource type="AudioStream" uid="uid://be0ht3pc45dhe" path="res://Assets/Sounds/Ambiance/DockWaveAmbiance.mp3" id="11_8oiwx"]
+[ext_resource type="Script" uid="uid://b0ljok3vyfynm" path="res://Scripts/randomized_audio_stream_player.gd" id="13_2sg1r"]
+[ext_resource type="AudioStream" uid="uid://c3oxr11dqdvfa" path="res://Assets/Sounds/SFX/Seagull.mp3" id="13_4kw8a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ic4fl"]
 texture = ExtResource("2_tacti")
@@ -52,7 +56,7 @@ shader_parameter/fast_noise = SubResource("NoiseTexture2D_sjach")
 shader_parameter/speed = Vector2(0.05, 0.07)
 shader_parameter/wave_strength = 0.1
 shader_parameter/scale_y = 200.0
-shader_parameter/y_zoom = 2.1435893
+shader_parameter/y_zoom = 3.1384292
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lqw2r"]
 
@@ -60,6 +64,7 @@ shader_parameter/y_zoom = 2.1435893
 size = Vector2(20.53418, 63)
 
 [node name="Docks" type="Node" unique_id=952326508]
+script = ExtResource("1_x64gp")
 
 [node name="Background" type="Node2D" parent="." unique_id=440231823]
 
@@ -125,6 +130,20 @@ script = ExtResource("10_1h5l0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DocksExit" unique_id=1284059631]
 position = Vector2(0.26708984, -3.7022858)
 shape = SubResource("RectangleShape2D_lqw2r")
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=1869334138]
+stream = ExtResource("11_8oiwx")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="SeagullSound" type="AudioStreamPlayer" parent="." unique_id=1954547603]
+stream = ExtResource("13_4kw8a")
+volume_db = -12.0
+script = ExtResource("13_2sg1r")
+min_pitch = 0.8
+max_pitch = 1.2
+metadata/_custom_type_script = "uid://b0ljok3vyfynm"
 
 [connection signal="body_entered" from="DocksExit" to="DocksExit" method="_on_body_entered"]
 
