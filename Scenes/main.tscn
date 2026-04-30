@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cme68dxjpedf2" path="res://Scripts/main.gd" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c36emmaioid3n" path="res://Scenes/main_menu.tscn" id="2_bo1nx"]
 [ext_resource type="AudioStream" uid="uid://bnqpbvn11jryr" path="res://Assets/Sounds/Music/Loop_Kings_Feast.mp3" id="3_8gbba"]
+[ext_resource type="AudioStream" uid="uid://bkb8u204quewh" path="res://Assets/Sounds/SFX/Click1.mp3" id="4_jjvhh"]
 
 [node name="Main" type="Node" unique_id=1374269166]
 script = ExtResource("1_bo1nx")
@@ -16,8 +17,12 @@ anchors_preset = -1
 anchor_right = 8.0
 anchor_bottom = 4.5
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=854389612]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=854389612]
+process_mode = 3
 stream = ExtResource("3_8gbba")
 volume_db = -5.0
 autoplay = true
 parameters/looping = true
+
+[node name="UISFX" type="AudioStreamPlayer" parent="." unique_id=377530470]
+stream = ExtResource("4_jjvhh")

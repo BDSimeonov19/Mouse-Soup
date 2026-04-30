@@ -3,6 +3,7 @@ extends Control
 var hud_scene = preload("res://Scenes/hud.tscn").instantiate()
 
 func _on_begin_pressed() -> void:
+	get_node("/root/Main/UISFX").play()
 	var current_level_path = SaveManager.save_data["current_level_path"]
 	var level_scene = load(current_level_path).instantiate()
 	get_node("/root/Main/World").add_child(level_scene)
@@ -13,10 +14,12 @@ func _on_begin_pressed() -> void:
 	queue_free()
 
 func _on_settings_pressed() -> void:
+	get_node("/root/Main/UISFX").play()
 	var settings_menu_scene = load("res://Scenes/settings_menu.tscn").instantiate()
 	add_child(settings_menu_scene)
 
 
 func _on_quit_pressed() -> void:
+	get_node("/root/Main/UISFX").play()
 	SaveManager.save_game()
 	get_tree().quit()
