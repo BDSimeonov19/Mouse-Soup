@@ -10,4 +10,4 @@ func _on_body_entered(body: Node2D) -> void:
 func change_to_docks_scene():
 	get_node("/root/Main/World/Forest").queue_free()
 	get_node("/root/Main/World").add_child(docks_scene)
-	SaveManager.save_data["current_level_path"] = "res://Scenes/docks.tscn"
+	SaveManager.save_data["current_level_path"] = "res://Scenes/Levels/docks.tscn"

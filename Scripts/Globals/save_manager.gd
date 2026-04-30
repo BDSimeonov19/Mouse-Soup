@@ -1,6 +1,10 @@
 extends Node
 
-var save_data := {"items_collected": [], "current_level_path" : "res://Scenes/Levels/forest.tscn"}
+var save_data := {
+	"items_collected": [],
+	"current_level_path" : "res://Scenes/Levels/forest.tscn",
+	"best_score" : 0
+	}
 var settings := {"volume": 100}
 
 func save_game():

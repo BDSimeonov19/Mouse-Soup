@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://biigeg3bh58bc"]
 
-[ext_resource type="Script" uid="uid://pnjqi7qaq75e" path="res://Scripts/docks.gd" id="1_x7cng"]
+[ext_resource type="Script" uid="uid://pnjqi7qaq75e" path="res://Scripts/Docks/docks.gd" id="1_x7cng"]
 [ext_resource type="Texture2D" uid="uid://1mbkoucrknlf" path="res://Assets/Graphics/Docks/DocksBackgroundSky.png" id="2_1wcb1"]
 [ext_resource type="Texture2D" uid="uid://djl2hv5ljy08x" path="res://Assets/Graphics/Docks/Clouds.png" id="3_aijsk"]
 [ext_resource type="Texture2D" uid="uid://d4es5bgmp067d" path="res://Assets/Graphics/Docks/DocksBackgroundSea.png" id="4_ctby2"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bgn5vxy1juti7" path="res://Scenes/Characters/seagull.tscn" id="8_6q1un"]
 [ext_resource type="Shader" uid="uid://dbwyw6mhspqs4" path="res://Scripts/Docks/reflections.gdshader" id="9_e5btr"]
 [ext_resource type="Script" uid="uid://e4uxajw4x50o" path="res://Scripts/Docks/water.gd" id="10_yr52y"]
-[ext_resource type="Script" uid="uid://rjv87k3ngph1" path="res://Scripts/docks_exit.gd" id="11_2vomj"]
+[ext_resource type="Script" uid="uid://rjv87k3ngph1" path="res://Scripts/Docks/docks_exit.gd" id="11_2vomj"]
 [ext_resource type="AudioStream" uid="uid://be0ht3pc45dhe" path="res://Assets/Sounds/Ambiance/DockWaveAmbiance.mp3" id="12_gunj6"]
 [ext_resource type="AudioStream" uid="uid://c3oxr11dqdvfa" path="res://Assets/Sounds/SFX/Seagull.mp3" id="13_27bkx"]
 [ext_resource type="Script" uid="uid://b0ljok3vyfynm" path="res://Scripts/randomized_audio_stream_player.gd" id="14_b7npi"]

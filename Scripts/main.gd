@@ -18,5 +18,9 @@ func _process(delta: float) -> void:
 
 func developer_reset_game():
 	if Input.is_action_just_pressed("reset"):
-		SaveManager.save_data = {"items_collected": [], "current_level_path" : "res://Scenes/forest.tscn"}
+		SaveManager.save_data = {
+		"items_collected": [],
+		"current_level_path" : "res://Scenes/Levels/forest.tscn",
+		"best_score" : 0
+		}
 		SaveManager.settings = {"volume": 100}

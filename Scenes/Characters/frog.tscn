@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ybutudaxkcov"]
 
 [ext_resource type="Texture2D" uid="uid://binwkukn3s4s4" path="res://Assets/Graphics/Characters/Frog.png" id="1_c3muq"]
-[ext_resource type="Script" uid="uid://mgyixkil36v7" path="res://Scripts/frog.gd" id="1_xvrdk"]
+[ext_resource type="Script" uid="uid://mgyixkil36v7" path="res://Scripts/Characters/frog.gd" id="1_xvrdk"]
 [ext_resource type="Script" uid="uid://b2h13x0m682pb" path="res://Scripts/hitbox.gd" id="2_xvrdk"]
 [ext_resource type="Script" uid="uid://beo2dh2xw8ate" path="res://Scripts/State Machine/state_machine.gd" id="3_anyvr"]
 [ext_resource type="Script" uid="uid://cuv8ndmmasysv" path="res://Scripts/State Machine/ground_follow.gd" id="5_kbuj8"]

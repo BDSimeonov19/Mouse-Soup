@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cxyl5jt2kljyu" path="res://Assets/Graphics/FieldGround.png" id="5_dl8w0"]
 [ext_resource type="PackedScene" uid="uid://bcuxx67ofl6a0" path="res://Scenes/Characters/mouse.tscn" id="6_j6e6t"]
 [ext_resource type="PackedScene" uid="uid://ybutudaxkcov" path="res://Scenes/Characters/frog.tscn" id="7_6yxnv"]
+[ext_resource type="Script" uid="uid://v01ms673knl4" path="res://Scripts/Field/field_exit.gd" id="8_ffexn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2mji"]
 texture = ExtResource("5_dl8w0")
@@ -60,6 +61,9 @@ texture = ExtResource("5_dl8w0")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s2mji")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prumq"]
+size = Vector2(29, 62)
+
 [node name="Field" type="Node" unique_id=1041321443]
 
 [node name="Background" type="Node2D" parent="." unique_id=676034697]
@@ -104,3 +108,13 @@ position = Vector2(51.66532, 130.96515)
 
 [node name="Frog" parent="." unique_id=838838442 instance=ExtResource("7_6yxnv")]
 position = Vector2(273, 128)
+
+[node name="FieldExit" type="Area2D" parent="." unique_id=1336735181]
+position = Vector2(722, 129)
+script = ExtResource("8_ffexn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FieldExit" unique_id=547697743]
+position = Vector2(1, -14)
+shape = SubResource("RectangleShape2D_prumq")
+
+[connection signal="body_entered" from="FieldExit" to="FieldExit" method="_on_body_entered"]
