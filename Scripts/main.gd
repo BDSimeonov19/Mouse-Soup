@@ -9,7 +9,6 @@ func _ready() -> void:
 	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(SaveManager.settings["volume"]/100))
 
 func _process(delta: float) -> void:
-	print(SaveManager.save_data)
 	developer_reset_game()
 	if is_pausable and Input.is_action_just_pressed("pause"):
 		var settings_menu_scene = preload("res://Scenes/UI/pause_menu.tscn").instantiate()

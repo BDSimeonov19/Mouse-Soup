@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://5mtwwwxa61lg" path="res://Scripts/UI/pause_menu.gd" id="1_1och7"]
 [ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_k0w1u"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_1och7"]
+[ext_resource type="StyleBox" uid="uid://bw6jq4u8jo0dv" path="res://Assets/FocusButton.tres" id="4_oykix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpi0q"]
 bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
@@ -75,6 +76,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_bpi0q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vmyb1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_myy0f")
+theme_override_styles/focus = ExtResource("4_oykix")
 text = "Resume"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=972509462]
@@ -85,6 +87,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_bpi0q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vmyb1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_myy0f")
+theme_override_styles/focus = ExtResource("4_oykix")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1079124060]
@@ -95,6 +98,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_bpi0q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vmyb1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_myy0f")
+theme_override_styles/focus = ExtResource("4_oykix")
 text = "Quit"
 
 [node name="Title" type="Label" parent="." unique_id=439142096]

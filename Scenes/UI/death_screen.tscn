@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_rwas2"]
 [ext_resource type="Script" uid="uid://lkoup17ci8ng" path="res://Scripts/UI/death_screen.gd" id="1_tseak"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_tseak"]
+[ext_resource type="StyleBox" uid="uid://bw6jq4u8jo0dv" path="res://Assets/FocusButton.tres" id="4_65cmr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amiou"]
 bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
@@ -80,6 +81,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_amiou")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vb6s7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tpvs2")
+theme_override_styles/focus = ExtResource("4_65cmr")
 text = "Restart"
 
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

@@ -2,8 +2,10 @@ extends Control
 
 var forest_scene = load("res://Scenes/Levels/forest.tscn").instantiate()
 var hud_scene = preload("res://Scenes/UI/hud.tscn").instantiate()
+@onready var restart: Button = $Restart
 
 func _on_restart_pressed() -> void:
+	restart.grab_focus()
 	get_node("/root/Main/UISFX").play()
 	get_node("/root/Main/World").add_child(forest_scene)
 	get_node("/root/Main/UI").add_child(hud_scene)

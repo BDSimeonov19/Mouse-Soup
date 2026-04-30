@@ -1,11 +1,17 @@
 extends Control
 
 var hud_scene = preload("res://Scenes/UI/hud.tscn").instantiate()
+@onready var begin: Button = $VBoxContainer/Begin
+
+func _ready() -> void:
+	focus()
+
+func focus() -> void:
+	begin.grab_focus()
 
 func _on_begin_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
 	var current_level_path = SaveManager.save_data["current_level_path"]
-	print(SaveManager.save_data["current_level_path"])
 	var level_scene = load(current_level_path).instantiate()
 	get_node("/root/Main/World").add_child(level_scene)
 	get_node("/root/Main/UI").add_child(hud_scene)

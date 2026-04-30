@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4ke05w4j3hkj" path="res://Scripts/UI/win_screen.gd" id="1_bsq8g"]
 [ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_hf3wf"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_bsq8g"]
+[ext_resource type="StyleBox" uid="uid://bw6jq4u8jo0dv" path="res://Assets/FocusButton.tres" id="4_g7hbh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7hbh"]
 bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
@@ -80,6 +81,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_g7hbh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_k5iyp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jrofy")
+theme_override_styles/focus = ExtResource("4_g7hbh")
 text = "Play Again"
 
 [node name="BestScore" type="Label" parent="." unique_id=1136017638]

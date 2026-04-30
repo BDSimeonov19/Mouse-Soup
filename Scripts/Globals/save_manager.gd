@@ -13,7 +13,6 @@ func reset():
 	ItemsManager.items_collected = []
 
 func save_game():
-	print(save_data["current_level_path"])
 	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
 
 	save_file.store_line(JSON.stringify(save_data))

@@ -1,5 +1,13 @@
 extends Control
 
+@onready var resume: Button = $VBoxContainer/Resume
+
+func _ready() -> void:
+	focus()
+
+func focus() -> void:
+	resume.grab_focus()
+
 func _on_resume_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
 	get_tree().paused = false

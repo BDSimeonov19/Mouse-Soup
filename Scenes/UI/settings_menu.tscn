@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="2_3etfd"]
 [ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="3_rahb6"]
 [ext_resource type="Texture2D" uid="uid://iv0kwb8yo8ml" path="res://Assets/Graphics/Elements.png" id="4_fe37x"]
+[ext_resource type="StyleBox" uid="uid://bw6jq4u8jo0dv" path="res://Assets/FocusButton.tres" id="4_ynxh7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaqfp"]
 bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
@@ -110,6 +111,7 @@ theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_aaqfp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_j2dne")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6kysc")
+theme_override_styles/focus = ExtResource("4_ynxh7")
 text = "Back"
 
 [node name="Title" type="Label" parent="." unique_id=1800734721]
