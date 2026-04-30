@@ -1,10 +1,11 @@
 extends Control
 
-var hud_scene = preload("res://Scenes/hud.tscn").instantiate()
+var hud_scene = preload("res://Scenes/UI/hud.tscn").instantiate()
 
 func _on_begin_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
 	var current_level_path = SaveManager.save_data["current_level_path"]
+	print(SaveManager.save_data["current_level_path"])
 	var level_scene = load(current_level_path).instantiate()
 	get_node("/root/Main/World").add_child(level_scene)
 	get_node("/root/Main/UI").add_child(hud_scene)
@@ -15,7 +16,7 @@ func _on_begin_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
-	var settings_menu_scene = load("res://Scenes/settings_menu.tscn").instantiate()
+	var settings_menu_scene = load("res://Scenes/UI/settings_menu.tscn").instantiate()
 	add_child(settings_menu_scene)
 
 

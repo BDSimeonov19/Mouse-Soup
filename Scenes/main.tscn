@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brbqj7a7n7elk"]
 
 [ext_resource type="Script" uid="uid://cme68dxjpedf2" path="res://Scripts/main.gd" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://c36emmaioid3n" path="res://Scenes/main_menu.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://c36emmaioid3n" path="res://Scenes/UI/main_menu.tscn" id="2_bo1nx"]
 [ext_resource type="AudioStream" uid="uid://bnqpbvn11jryr" path="res://Assets/Sounds/Music/Loop_Kings_Feast.mp3" id="3_8gbba"]
 [ext_resource type="AudioStream" uid="uid://bkb8u204quewh" path="res://Assets/Sounds/SFX/Click1.mp3" id="4_jjvhh"]
 

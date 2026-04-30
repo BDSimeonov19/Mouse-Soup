@@ -12,5 +12,6 @@ func change_health(current_health, diff):
 func kill():
 	get_node("/root/Main/World").get_child(0).queue_free()
 	get_node("/root/Main/UI").get_child(0).queue_free()
-	var death_screen_scene = load("res://Scenes/death_screen.tscn").instantiate()
+	var death_screen_scene = load("res://Scenes/UI/death_screen.tscn").instantiate()
 	get_node("/root/Main/UI").add_child(death_screen_scene)
+	health = 3

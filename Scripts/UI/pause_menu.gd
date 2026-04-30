@@ -9,7 +9,7 @@ func _on_resume_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
-	var settings_menu_scene = load("res://Scenes/settings_menu.tscn").instantiate()
+	var settings_menu_scene = load("res://Scenes/UI/settings_menu.tscn").instantiate()
 	add_child(settings_menu_scene)
 
 

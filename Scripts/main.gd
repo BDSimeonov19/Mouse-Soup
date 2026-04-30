@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	developer_reset_game()
 	if is_pausable and Input.is_action_just_pressed("pause"):
-		var settings_menu_scene = preload("res://Scenes/pause_menu.tscn").instantiate()
+		var settings_menu_scene = preload("res://Scenes/UI/pause_menu.tscn").instantiate()
 		get_node("/root/Main/UI").add_child(settings_menu_scene)
 		get_tree().paused = true
 		get_node("/root/Main").is_pausable = false

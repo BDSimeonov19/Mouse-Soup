@@ -1,7 +1,7 @@
 extends Control
 
-var forest_scene = load("res://Scenes/forest.tscn").instantiate()
-var hud_scene = preload("res://Scenes/hud.tscn").instantiate()
+var forest_scene = load("res://Scenes/Levels/forest.tscn").instantiate()
+var hud_scene = preload("res://Scenes/UI/hud.tscn").instantiate()
 
 func _on_restart_pressed() -> void:
 	get_node("/root/Main/UISFX").play()

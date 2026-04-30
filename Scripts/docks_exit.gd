@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var docks_scene = preload("res://Scenes/docks.tscn").instantiate()
-@onready var field_scene = preload("res://Scenes/field.tscn").instantiate()
+@onready var docks_scene = preload("res://Scenes/Levels/docks.tscn").instantiate()
+@onready var field_scene = preload("res://Scenes/Levels/field.tscn").instantiate()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Character:
