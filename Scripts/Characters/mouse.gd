@@ -10,7 +10,6 @@ var step_sfx_paths = {
 	"Field" : ["res://Assets/Sounds/SFX/GrassStep1.mp3", 0],
 }
 
-@onready var miss_sfx: RandomizedAudioStreamPlayer = $MissSFX
 @onready var jump_sfx: RandomizedAudioStreamPlayer = $JumpSFX
 @onready var hurt_sfx: RandomizedAudioStreamPlayer = $HurtSFX
 @onready var step_sfx: RandomizedAudioStreamPlayer = $StepSFX
