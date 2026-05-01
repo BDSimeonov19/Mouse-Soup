@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://begrkg48e3cdc"]
+
+[ext_resource type="Texture2D" uid="uid://doqm4hh8y3khx" path="res://Assets/Graphics/Forest/FallBackground.png" id="1_ctt25"]
+[ext_resource type="Script" uid="uid://dgrwn4ocngpww" path="res://Scripts/UI/intro_screen.gd" id="1_syjvp"]
+[ext_resource type="FontFile" uid="uid://2ej55s5un1gj" path="res://Assets/Fonts/Little Story.ttf" id="2_syjvp"]
+[ext_resource type="StyleBox" uid="uid://bw6jq4u8jo0dv" path="res://Assets/FocusButton.tres" id="3_bgt4u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ghv"]
+bg_color = Color(0.6646157, 0.5450291, 0.4204291, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9073619, 0.79726005, 0.6803515, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s00sm"]
+bg_color = Color(0.50363636, 0.40337807, 0.29561737, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5688208, 0.43386292, 0.28008035, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n387p"]
+bg_color = Color(0.6335806, 0.5179831, 0.39445058, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7260533, 0.568654, 0.39308274, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 18
+
+[node name="IntroScreen" type="Control" unique_id=1430762577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syjvp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2052918737]
+position = Vector2(160, 84)
+scale = Vector2(0.89134634, 0.89134604)
+texture = ExtResource("1_ctt25")
+
+[node name="Title" type="Label" parent="." unique_id=1798106510]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 313.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("2_syjvp")
+theme_override_font_sizes/font_size = 15
+text = "You're a mouse and your birthday is coming up!
+You have invited all your friends over but there is one
+thing missing... ingredients for a tasty soup. You'll
+have to venture out and fight anyone who stands between
+you and those tasy ingredients
+Good luck!"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="." unique_id=288135487]
+z_index = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 147.0
+offset_right = 200.0
+offset_bottom = 163.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_syjvp")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_c2ghv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s00sm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n387p")
+theme_override_styles/focus = ExtResource("3_bgt4u")
+text = "Start"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
