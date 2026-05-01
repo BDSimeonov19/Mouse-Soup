@@ -107,12 +107,12 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 
 func take_damage() -> void:
 	hurt_sfx.play_rand()
-	health -= 1;
-	PlayerManager.change_health(health, -1)
+	PlayerManager.change_health(-1)
+	health = PlayerManager.health
 	sprite.modulate = Color(1, 0, 0, 1)
 	await get_tree().create_timer(0.5).timeout
 	sprite.modulate = Color(1, 1, 1, 1)
 	if health <= 0:
 		#PlayerManager.kill();
-		health = 3
-		PlayerManager.change_health(health, 3)
+		PlayerManager.change_health(5)
+		health = PlayerManager.health

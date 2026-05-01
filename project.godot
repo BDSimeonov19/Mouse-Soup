@@ -24,6 +24,7 @@ PlayerManager="*uid://q1ea487hetiu"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 

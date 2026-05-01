@@ -12,14 +12,16 @@ func _ready() -> void:
 
 func _on_volume_slider_value_changed(value: float) -> void:
 	volume_label.text = str(int(value)) + "%"
+	SaveManager.settings["volume"] = volume_slider.value
+	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(SaveManager.settings["volume"]/100))
 
 
 func _on_back_pressed() -> void:
 	get_node("/root/Main/UISFX").play()
 	SaveManager.settings["volume"] = volume_slider.value
+	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(SaveManager.settings["volume"]/100))
 	get_parent().focus()
 	queue_free()
-	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(SaveManager.settings["volume"]/100))
 
 
 func _on_volume_slider_drag_started() -> void:

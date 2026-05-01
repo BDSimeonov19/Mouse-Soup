@@ -17,6 +17,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		animated_sprite_2d.queue_free()
 		sfx.play()
 		ItemsManager.item_collected(tag)
+		PlayerManager.change_health(1)
 		
 func _on_sfx_finished() -> void:
 	queue_free()

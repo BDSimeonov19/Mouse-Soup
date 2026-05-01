@@ -1,13 +1,14 @@
 extends Node
 
-var health := 3
+var health := 5
 
 signal health_change(new_health, health_change)
 
-func change_health(current_health, diff):
-	health = current_health
-	health_change.emit(current_health, diff)
-	print(current_health)
+func change_health(diff):
+	health += diff
+	health = clamp(health, 0, 5)
+	health_change.emit(health, diff)
+	print(health)
 
 func kill():
 	get_node("/root/Main/World").get_child(0).queue_free()
