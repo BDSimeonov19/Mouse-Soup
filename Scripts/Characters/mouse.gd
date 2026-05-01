@@ -113,6 +113,6 @@ func take_damage() -> void:
 	await get_tree().create_timer(0.5).timeout
 	sprite.modulate = Color(1, 1, 1, 1)
 	if health <= 0:
-		#PlayerManager.kill();
-		PlayerManager.change_health(5)
-		health = PlayerManager.health
+		PlayerManager.kill();
+		#PlayerManager.change_health(5)
+		#health = PlayerManager.health

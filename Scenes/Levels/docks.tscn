@@ -23,12 +23,15 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -2, 16, -2, 16, 4, -10, 4)
 1:0/0 = 0
+1:0/0/probability = 0.33
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 8, -2, 8, 4, -16, 4)
 3:0/0 = 0
+3:0/0/probability = 0.33
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
 0:1/0 = 0
+0:1/0/probability = 0.33
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -2, 16, -2, 16, 4, -16, 4)
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2, 16, -2, 16, 4, -8, 4)
@@ -44,26 +47,6 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ic4fl")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_ic4fl"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sjach"]
-noise = SubResource("FastNoiseLite_ic4fl")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_aj7fa"]
-shader = ExtResource("9_e5btr")
-shader_parameter/CAST_COLOUR = Color(0.0041956566, 0.10901741, 0.1540395, 1)
-shader_parameter/fast_noise = SubResource("NoiseTexture2D_sjach")
-shader_parameter/speed = Vector2(0.05, 0.07)
-shader_parameter/wave_strength = 0.1
-shader_parameter/scale_y = 200.0
-shader_parameter/y_zoom = 11.918183
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_lqw2r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2r"]
-size = Vector2(20.53418, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pkag"]
 atlas = ExtResource("16_q0mu3")
@@ -197,6 +180,26 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ic4fl"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sjach"]
+noise = SubResource("FastNoiseLite_ic4fl")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aj7fa"]
+shader = ExtResource("9_e5btr")
+shader_parameter/CAST_COLOUR = Color(0.0041956566, 0.10901741, 0.1540395, 1)
+shader_parameter/fast_noise = SubResource("NoiseTexture2D_sjach")
+shader_parameter/speed = Vector2(0.05, 0.07)
+shader_parameter/wave_strength = 0.1
+shader_parameter/scale_y = 200.0
+shader_parameter/y_zoom = 2.357948
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lqw2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2r"]
+size = Vector2(20.53418, 109.5)
+
 [node name="Docks" type="Node" unique_id=952326508]
 script = ExtResource("1_x7cng")
 
@@ -235,34 +238,122 @@ position = Vector2(263, 85)
 texture = ExtResource("5_gvwlv")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1748214064]
-tile_map_data = PackedByteArray("AAAAAAQAAAAAAAAAAAABAAQAAAABAAAAAAACAAQAAAADAAAAAAADAAQAAAAAAAEAAAAEAAQAAAABAAAAAAAFAAQAAAADAAAAAAAGAAQAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAADAAAAAAAJAAQAAAABAAAAAAADAAMAAAACAAEAAAACAAMAAAABAAEAAAAEAAMAAAADAAEAAAAGAAMAAAACAAEAAAAFAAMAAAABAAEAAAAHAAMAAAADAAEAAAAKAAQAAAABAAAAAAALAAQAAAABAAAAAAAMAAQAAAABAAAAAAANAAQAAAABAAAAAAAOAAQAAAABAAAAAAAPAAQAAAABAAAAAAAQAAQAAAABAAAAAAARAAQAAAABAAAAAAASAAQAAAABAAAAAAATAAQAAAABAAAAAAAUAAQAAAABAAAAAAAVAAQAAAABAAAAAAAWAAQAAAABAAAAAAAXAAQAAAABAAAAAAAYAAQAAAABAAAAAAAZAAQAAAABAAAAAAAaAAQAAAABAAAAAAAbAAQAAAABAAAAAAAcAAQAAAABAAAAAAAdAAQAAAABAAAAAAAeAAQAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAQAAAAAAAAAAAABAAQAAAABAAAAAAACAAQAAAADAAAAAAADAAQAAAAAAAEAAAAEAAQAAAABAAAAAAAFAAQAAAADAAAAAAAGAAQAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAADAAAAAAAJAAQAAAAAAAEAAAADAAMAAAACAAEAAAACAAMAAAABAAEAAAAEAAMAAAADAAEAAAAGAAMAAAACAAEAAAAFAAMAAAABAAEAAAAHAAMAAAADAAEAAAAKAAQAAAAAAAEAAAALAAQAAAABAAAAAAAMAAQAAAABAAAAAAANAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAPAAQAAAABAAAAAAAQAAQAAAADAAAAAAARAAQAAAABAAAAAAASAAQAAAAAAAEAAAATAAQAAAAAAAEAAAAUAAQAAAABAAAAAAAVAAQAAAADAAAAAAAWAAQAAAABAAAAAAAXAAQAAAABAAAAAAAYAAQAAAADAAAAAAAZAAQAAAABAAAAAAAaAAQAAAABAAAAAAAbAAQAAAADAAAAAAAcAAQAAAAAAAEAAAAdAAQAAAABAAAAAAAeAAQAAAAAAAEAAAAfAAQAAAAAAAEAAAAgAAQAAAABAAAAAAAhAAQAAAABAAAAAAAiAAQAAAABAAAAAAAjAAQAAAAAAAEAAAAkAAQAAAADAAAAAAAlAAQAAAABAAAAAAAmAAQAAAADAAAAAAAnAAQAAAABAAAAAAAoAAQAAAADAAAAAAApAAQAAAADAAAAAAAqAAQAAAADAAAAAAArAAQAAAAAAAEAAAAsAAQAAAABAAAAAAAtAAQAAAAAAAEAAAAuAAQAAAAAAAEAAAAvAAQAAAAAAAEAAAAwAAQAAAAAAAEAAAAxAAQAAAABAAAAAAAyAAQAAAABAAAAAAAzAAQAAAABAAAAAAA0AAQAAAADAAAAAAA1AAQAAAAAAAEAAAA2AAQAAAABAAAAAAA3AAQAAAAAAAEAAAA4AAQAAAADAAAAAAA5AAQAAAABAAAAAAA6AAQAAAADAAAAAAA7AAQAAAADAAAAAAA8AAQAAAADAAAAAAA9AAQAAAABAAAAAAA+AAQAAAABAAAAAAA/AAQAAAADAAAAAABAAAQAAAABAAAAAABBAAQAAAAAAAEAAABCAAQAAAADAAAAAAAJAAIAAAABAAEAAAAKAAIAAAACAAEAAAALAAIAAAADAAEAAAALAAEAAAABAAEAAAAMAAEAAAACAAEAAAANAAEAAAADAAEAAAAOAAAAAAABAAEAAAAPAAAAAAACAAEAAAAQAAAAAAACAAEAAAARAAAAAAACAAEAAAASAAAAAAACAAEAAAATAAAAAAADAAEAAAAKAP//AAAAAAAAAAALAP//AAABAAAAAAAMAP//AAACAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAABAAAAAAAIAP7/AAACAAAAAAACAP3/AAAAAAAAAAADAP3/AAABAAAAAAAEAP3/AAACAAAAAAAVAP//AAABAAEAAAAWAP//AAACAAEAAAAXAP//AAADAAEAAAAYAAEAAAABAAEAAAAZAAEAAAACAAEAAAAaAAEAAAADAAEAAAAgAAMAAAABAAEAAAAhAAMAAAADAAEAAAAiAAIAAAABAAEAAAAjAAIAAAADAAEAAAAjAAEAAAABAAEAAAAkAAEAAAACAAEAAAAlAAEAAAACAAEAAAAmAAEAAAADAAEAAAAnAAAAAAABAAEAAAAoAAAAAAADAAEAAAAhAAAAAAABAAEAAAAiAAAAAAADAAEAAAAqAAAAAAABAAEAAAArAAAAAAADAAEAAAAeAP//AAABAAEAAAAfAP//AAADAAEAAAAxAAMAAAABAAEAAAAyAAMAAAADAAEAAAAzAAIAAAABAAEAAAA0AAIAAAACAAEAAAA1AAIAAAACAAEAAAA2AAIAAAADAAEAAAA3AAEAAAABAAEAAAA4AAEAAAADAAEAAABDAAQAAAAAAAEAAABEAAQAAAADAAAAAABFAAQAAAAAAAEAAABGAAQAAAAAAAEAAABHAAQAAAAAAAEAAABIAAQAAAAAAAEAAABJAAQAAAAAAAEAAABKAAQAAAAAAAEAAABLAAQAAAABAAAAAABMAAQAAAADAAAAAABNAAQAAAABAAAAAABOAAQAAAABAAAAAABPAAQAAAADAAAAAABQAAQAAAABAAAAAABRAAQAAAABAAAAAABSAAQAAAADAAAAAABTAAQAAAABAAAAAABUAAQAAAAAAAEAAABVAAQAAAADAAAAAABWAAQAAAABAAAAAABXAAQAAAABAAAAAABYAAQAAAABAAAAAABZAAQAAAABAAAAAABaAAQAAAABAAAAAABJAAMAAAABAAEAAABKAAMAAAADAAEAAABIAAIAAAABAAEAAABJAAIAAAADAAEAAABJAAEAAAABAAEAAABKAAEAAAADAAEAAABLAAAAAAABAAEAAABMAAAAAAADAAEAAAA7AAEAAAADAAEAAAA6AAEAAAABAAEAAAD//wMAAAABAAAAAAD//wIAAAABAAAAAAD//wQAAAABAAAAAAD//wEAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_6tqij")
 
 [node name="Mouse" parent="." unique_id=1392289620 instance=ExtResource("7_u5dyw")]
-position = Vector2(15, 114)
+position = Vector2(25, 128)
 
-[node name="Seagull" parent="." unique_id=1793869370 instance=ExtResource("8_6q1un")]
-position = Vector2(245.90826, 131.71686)
+[node name="Enemies" type="Node2D" parent="." unique_id=1788580974]
 
-[node name="FlyingReturnHome" parent="Seagull/StateMachine" parent_id_path=PackedInt32Array(1793869370, 1390928440) index="1" unique_id=1409439603 node_paths=PackedStringArray("home")]
-home = NodePath("../../../Home1")
+[node name="Seagull" parent="Enemies" unique_id=1793869370 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(120, 65)
+home = NodePath("../Home1")
 
-[node name="Home1" type="Marker2D" parent="." unique_id=1925129990]
-position = Vector2(197, 44)
+[node name="Seagull2" parent="Enemies" unique_id=2125417899 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(563, -28)
+home = NodePath("../Home2")
+
+[node name="Seagull3" parent="Enemies" unique_id=2055864366 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(116, -127)
+home = NodePath("../Home3")
+
+[node name="Seagull4" parent="Enemies" unique_id=785218414 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(897, 29)
+home = NodePath("../Home4")
+
+[node name="Seagull5" parent="Enemies" unique_id=473394942 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(1070, -15)
+home = NodePath("../Home5")
+
+[node name="Seagull6" parent="Enemies" unique_id=1566885348 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(1289, -12)
+home = NodePath("../Home6")
+
+[node name="Seagull7" parent="Enemies" unique_id=1756168780 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(1179.9495, -47.356476)
+home = NodePath("../Home7")
+
+[node name="Seagull8" parent="Enemies" unique_id=1857155584 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(2157.16, 109.44097)
+home = NodePath("../Home8")
+
+[node name="Seagull9" parent="Enemies" unique_id=240161415 node_paths=PackedStringArray("home") instance=ExtResource("8_6q1un")]
+position = Vector2(2310, 25)
+home = NodePath("../Home9")
+
+[node name="Home1" type="Marker2D" parent="Enemies" unique_id=1925129990]
+position = Vector2(155, 79)
+
+[node name="Home2" type="Marker2D" parent="Enemies" unique_id=1722305887]
+position = Vector2(532, -29)
+
+[node name="Home3" type="Marker2D" parent="Enemies" unique_id=2047110033]
+position = Vector2(114, -110)
+
+[node name="Home4" type="Marker2D" parent="Enemies" unique_id=2076767611]
+position = Vector2(884, 55)
+
+[node name="Home5" type="Marker2D" parent="Enemies" unique_id=2011511431]
+position = Vector2(1085.2482, -3.0382996)
+
+[node name="Home6" type="Marker2D" parent="Enemies" unique_id=561564618]
+position = Vector2(1279.3152, 1.1602631)
+
+[node name="Home7" type="Marker2D" parent="Enemies" unique_id=1978930608]
+position = Vector2(1182, -36)
+
+[node name="Home8" type="Marker2D" parent="Enemies" unique_id=923338315]
+position = Vector2(2179.655, 104.86814)
+
+[node name="Home9" type="Marker2D" parent="Enemies" unique_id=965436589]
+position = Vector2(2332.6694, 24.628891)
+
+[node name="Collectibles" type="Node2D" parent="." unique_id=2019089738]
+
+[node name="Fish" parent="Collectibles" unique_id=1562721093 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(95, -94)
+tag = "fish"
+sprite_frames = SubResource("SpriteFrames_3hbpf")
+
+[node name="Crab" parent="Collectibles" unique_id=1723675856 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(833, 36)
+tag = "crab"
+sprite_frames = SubResource("SpriteFrames_gt3mu")
+
+[node name="Cheese" parent="Collectibles" unique_id=1661357817 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(1376.4113, -0.29699707)
+tag = "cheese"
+sprite_frames = SubResource("SpriteFrames_gawbj")
+
+[node name="Milk" parent="Collectibles" unique_id=256305284 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(1954, 30)
+tag = "milk"
+sprite_frames = SubResource("SpriteFrames_ohvrt")
+
+[node name="Clam" parent="Collectibles" unique_id=1457996154 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(989.89417, -35.133957)
+tag = "clam"
+sprite_frames = SubResource("SpriteFrames_810qi")
+
+[node name="Shrimp" parent="Collectibles" unique_id=512459094 groups=["collectibles"] instance=ExtResource("15_0gd3e")]
+position = Vector2(2433.9392, 2.3633575)
+tag = "shrimp"
+sprite_frames = SubResource("SpriteFrames_3ugie")
 
 [node name="Water" type="Sprite2D" parent="." unique_id=713173947]
 material = SubResource("ShaderMaterial_aj7fa")
-position = Vector2(725.5, 204.5)
-scale = Vector2(1451, 96.99998)
+position = Vector2(1480, 204.5)
+scale = Vector2(2960, 96.99998)
 texture = SubResource("CanvasTexture_lqw2r")
 script = ExtResource("10_yr52y")
 
 [node name="DocksExit" type="Area2D" parent="." unique_id=1107694247]
-position = Vector2(456.46582, 114.202286)
+position = Vector2(2605.5762, 110.46621)
 script = ExtResource("11_2vomj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DocksExit" unique_id=1284059631]
-position = Vector2(0.26708984, -3.7022858)
+position = Vector2(0.42382813, -22.71621)
 shape = SubResource("RectangleShape2D_lqw2r")
 
 [node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=1869334138]
@@ -279,36 +370,4 @@ min_pitch = 0.8
 max_pitch = 1.2
 metadata/_custom_type_script = "uid://b0ljok3vyfynm"
 
-[node name="Fish" parent="." unique_id=1562721093 instance=ExtResource("15_0gd3e")]
-position = Vector2(96, 101)
-tag = "fish"
-sprite_frames = SubResource("SpriteFrames_3hbpf")
-
-[node name="Crab" parent="." unique_id=1723675856 instance=ExtResource("15_0gd3e")]
-position = Vector2(128.00089, 99.66773)
-tag = "crab"
-sprite_frames = SubResource("SpriteFrames_gt3mu")
-
-[node name="Cheese" parent="." unique_id=1661357817 instance=ExtResource("15_0gd3e")]
-position = Vector2(190.13388, 98.71184)
-tag = "cheese"
-sprite_frames = SubResource("SpriteFrames_gawbj")
-
-[node name="Milk" parent="." unique_id=256305284 instance=ExtResource("15_0gd3e")]
-position = Vector2(221.04106, 98.07458)
-tag = "milk"
-sprite_frames = SubResource("SpriteFrames_ohvrt")
-
-[node name="Clam" parent="." unique_id=1457996154 instance=ExtResource("15_0gd3e")]
-position = Vector2(158.27081, 128.34448)
-tag = "clam"
-sprite_frames = SubResource("SpriteFrames_810qi")
-
-[node name="Shrimp" parent="." unique_id=512459094 instance=ExtResource("15_0gd3e")]
-position = Vector2(288.90942, 130.5749)
-tag = "shrimp"
-sprite_frames = SubResource("SpriteFrames_3ugie")
-
 [connection signal="body_entered" from="DocksExit" to="DocksExit" method="_on_body_entered"]
-
-[editable path="Seagull"]

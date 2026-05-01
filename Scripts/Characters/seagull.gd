@@ -9,6 +9,7 @@ const SPEED = 35.0
 
 var last_velocity := 0.0
 
+@export var home : Marker2D
 @onready var sprite := $AnimatedSprite2D;
 
 func _physics_process(delta: float) -> void:

@@ -9,6 +9,7 @@ var hud_scene = preload("res://Scenes/UI/hud.tscn").instantiate()
 
 func _ready() -> void:
 	restart.grab_focus()
+	get_node("/root/Main").is_pausable = false
 	var score = SaveManager.save_data["items_collected"].size()
 	var best_score = int(SaveManager.save_data["best_score"])
 	if score > best_score:
@@ -19,6 +20,7 @@ func _ready() -> void:
 	
 
 func _on_restart_pressed() -> void:
+	get_node("/root/Main").is_pausable = true
 	SaveManager.reset()
 	SaveManager.save_game()
 	get_node("/root/Main/UISFX").play()

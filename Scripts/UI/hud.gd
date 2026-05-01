@@ -1,6 +1,6 @@
 extends Control
 
-@onready var cheese = [$"CanvasLayer/HP 1", $"CanvasLayer/HP 2", $"CanvasLayer/HP 3", $"CanvasLayer/HP 4", $"CanvasLayer/HP 5"]
+@onready var cheese = [$"CanvasLayer/HP 1", $"CanvasLayer/HP 2", $"CanvasLayer/HP 3"]
 
 func update_health(current_health, health_change):
 	for i in range(cheese.size()):

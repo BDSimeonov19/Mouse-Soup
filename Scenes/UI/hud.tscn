@@ -16,7 +16,7 @@ script = ExtResource("1_fccik")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1172185052]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1995001017]
-offset_left = 206.0
+offset_left = 237.0
 offset_top = 2.0
 offset_right = 317.0
 offset_bottom = 17.0
@@ -41,21 +41,23 @@ region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="HP 4" type="Sprite2D" parent="CanvasLayer" unique_id=1069188296]
+visible = false
 position = Vector2(258, 10)
 texture = ExtResource("2_bjfho")
 region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="HP 5" type="Sprite2D" parent="CanvasLayer" unique_id=1426348014]
+visible = false
 position = Vector2(242, 10)
 texture = ExtResource("2_bjfho")
 region_enabled = true
 region_rect = Rect2(0, 16, 16, 16)
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=211332497]
-offset_left = 208.0
+offset_left = 240.0
 offset_top = 3.0
-offset_right = 233.0
+offset_right = 265.0
 offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_bjfho")
 theme_override_font_sizes/font_size = 12

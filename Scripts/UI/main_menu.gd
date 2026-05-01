@@ -11,7 +11,6 @@ func focus() -> void:
 
 func _on_begin_pressed() -> void:
 	get_node("/root/Main/UISFX").play()	
-	get_node("/root/Main").is_pausable = true
 	var intro_screen_scene = load("res://Scenes/UI/intro_screen.tscn").instantiate()
 	get_node("/root/Main/UI").add_child(intro_screen_scene)
 	queue_free()
